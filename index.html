@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>balance</title>
+             
+        <script defer  src="prechargement.js" ></script>
+        
+       <script defer src="canvas.js" ></script>
+       <script  defer src="gestionsouris.js" ></script>
+       
+        
+ 
+        
+        <link rel="stylesheet" href="styles.css" type="text/css" />
+    </head>
+    <body>
+	<progress  id="progressBar" value="0" max="100">0%</progress> 
+	<div id="config" style='display:none'>
+	<input class='inputeq' type="number" min="0" step="1" id="nbxg" value="1">x+<input class='inputeq' min="0" step="1"   type="number" id="nbg" value="1">=<input class='inputeq'   min="0" step="1" type="number" id="nbxd" value="1">x+<input class='inputeq' min="0" step="1"   type="number" id="nbd" value="1"><input style="font-size:30px;width:100px; cursor:pointer;" type="button" value="ok" onclick='configperso()';></div>
+	<div id='divcanvas'>
+        <canvas id="mon_canvas" width="600" height="400">
+            Message pour les navigateurs ne supportant pas encore canvas.
+        </canvas>
+        </div>
+		<div id='comgauche'>
+			<a style="cursor:pointer;" onclick="axg();"><img src="plus.png"><img src="poidsx.png"></a><a style="cursor:pointer;"  onclick="ag();"><img src="plus.png"><img src="poids.png"></a><br/>
+			<a style="cursor:pointer;" onclick="sxg();"><img src="moins.png"><img src="poidsx.png"></a><a style="cursor:pointer;"  onclick="sg();"><img src="moins.png"><img src="poids.png"></a><br/>
+			
+			</div>
+				<div id='comdroite'  >
+			<a style="cursor:pointer;" onclick="axd();"><img src="plus.png"><img src="poidsx.png"></a><a style="cursor:pointer;"  onclick="ad();"><img src="plus.png"><img src="poids.png"></a><br/>
+			<a style="cursor:pointer;" onclick="sxd();"><img src="moins.png"><img src="poidsx.png"></a><a style="cursor:pointer;"  onclick="sd();"><img src="moins.png"><img src="poids.png"></a><br/>
+			
+			
+			</div>
+			<div id='op'></div>
+			<div id='equation' >
+				<a style="margin:10px;cursor:pointer;" onclick="initialisation();" title="Générer une équation au hasard"><img src="loading.png"></a> <a style="cursor:pointer;" onclick="menuperso();" title="Générer sa propre équation" >Avec mon équation</a>
+				<br/>
+				<table id='liste-eq'></table>
+				
+				</div>
+			<span id="msg" style='bottom:0;position:absolute;'>Arnaud DURAND 08/07/20 GPL v5 utilisation commerciale interdite <a href='http://mathix.org'>mathix.org</a><br/><a href='equa-anim.zip'>Télécharger</a></span> </body>
+   
+         
+</html>
